@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omar Alghannam | Data Engineer – SQL & Database Systems</title>
+  <meta name="description"
+    content="Portfolio of Omar Alghannam — Data Engineer specializing in SQL, relational database design, data pipelines, BI dashboards, and backend system architecture." />
+  <meta name="keywords" content="Data Engineer, SQL, Database, BI, Analytics, Portfolio, Omar Alghannam" />
+  <meta name="author" content="Omar Alghannam" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">OA</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <span id="theme-icon">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+              </svg>
+            </span>
+          </button>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="particles-canvas"></canvas>
+      <div class="hero-gradient hero-gradient-1"></div>
+      <div class="hero-gradient hero-gradient-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Omar Alghannam</span></h1>
+        <p class="hero-subtitle">Data Engineer &nbsp;|&nbsp; SQL &amp; Database Systems &nbsp;|&nbsp; BI &amp; Analytics
+        </p>
+        <p class="hero-location">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+          </svg>
+          6th of October, Giza, Egypt
+        </p>
+        <div class="hero-links">
+          <a href="mailto:oa5429946@gmail.com" class="hero-link primary">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+            Email
+          </a>
+          <a href="tel:+201013615904" class="hero-link">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 3.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.01l-2.21 2.21z" />
+            </svg>
+            Phone
+          </a>
+          <a href="https://www.linkedin.com/in/omar-amr-56270232a" target="_blank" class="hero-link">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/Code10101010101" target="_blank" class="hero-link">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-frame">
+          <div class="profile-inner">
+            <img src="headshot.jpg" alt="Omar Alghannam" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <p class="section-label reveal">About Me</p>
+      <h2 class="section-title reveal reveal-delay-1">Building Data Systems<br />From the Ground Up</h2>
+      <div class="about-grid">
+        <div class="about-text reveal reveal-delay-2">
+          <p>
+            I'm a Data Science &amp; AI student at <strong>Zewail City of Science and Technology</strong> with a deep
+            passion for <strong>SQL, relational database design, and data engineering</strong>. I've built a mini DBMS
+            from scratch — complete with B+ Tree indexing, ACID transactions, and WAL recovery — and developed
+            full-stack backend systems like ride-hailing platforms and analytics dashboards.
+          </p>
+          <p>
+            My focus is on transforming raw data into <strong>reliable, queryable, and insightful systems</strong>. From
+            designing normalized schemas and writing complex SQL queries to building <strong>BI dashboards</strong> with
+            real-time filters and visualizations, I bring both engineering rigor and analytical thinking to every
+            project.
+          </p>
+        </div>
+        <div class="about-stats reveal reveal-delay-3">
+          <div class="stat-card">
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Major Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Languages</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Visualizations Built</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3rd</div>
+            <div class="stat-label">Year Student</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <p class="section-label reveal">Featured Work</p>
+      <h2 class="section-title reveal reveal-delay-1">Projects</h2>
+      <p class="section-desc reveal reveal-delay-2">A selection of database engines, backend systems, and analytics
+        dashboards I've engineered.</p>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1: Mowasla -->
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-visual" style="padding:0;">
+              <div class="project-carousel" id="mowasla-carousel">
+                <img src="mowasla-1.png" alt="Mowasla – Reports & Analytics Dashboard" class="carousel-img active" />
+                <img src="mowasla-2.jpg" alt="Mowasla – Admin Panel & System Overview" class="carousel-img" />
+                <img src="mowasla-3.jpg" alt="Mowasla – Driver Dashboard & Earnings" class="carousel-img" />
+                <img src="mowasla-4.jpg" alt="Mowasla – Passenger Booking & Wallet" class="carousel-img" />
+                <div class="carousel-controls">
+                  <button class="carousel-btn" data-dir="prev" aria-label="Previous">&#8249;</button>
+                  <span class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </span>
+                  <button class="carousel-btn" data-dir="next" aria-label="Next">&#8250;</button>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tag">Backend System</div>
+              <h3 class="project-title">Mowasla – Ride-Hailing System</h3>
+              <p class="project-oneliner">Full backend connecting passengers &amp; drivers in real-time with complete
+                ride management, payments, and admin panel.</p>
+              <div class="project-details">
+                <div class="project-detail">
+                  <span class="project-detail-label">My Work</span>
+                  <span class="project-detail-value">Database schema, backend logic, admin panel, real-time ride
+                    handling, fare estimation</span>
+                </div>
+                <div class="project-detail">
+                  <span class="project-detail-label">Results</span>
+                  <span class="project-detail-value">Complete passenger &amp; driver system with admin monitoring,
+                    wallet, and rating features</span>
+                </div>
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">C#</span>
+                <span class="tech-badge">SQL</span>
+                <span class="tech-badge">Visual Studio</span>
+                <span class="tech-badge">ADO.NET</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-btn primary">View Details →</a>
+                <a href="#" class="project-btn">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: Credit Card Fraud Data Governance -->
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-visual">
+              <div class="project-svg-art">
+                <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.8" />
+                      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.8" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Pipeline Flow -->
+                  <!-- Step 1 -->
+                  <rect x="20" y="30" width="88" height="40" rx="10" stroke="#00d4ff" stroke-width="1.5"
+                    fill="rgba(0,212,255,0.06)" />
+                  <text x="64" y="48" text-anchor="middle" fill="#00d4ff" font-size="9" font-family="Inter, sans-serif"
+                    font-weight="600">Raw</text>
+                  <text x="64" y="60" text-anchor="middle" fill="#00d4ff" font-size="9" font-family="Inter, sans-serif"
+                    font-weight="600">Dataset</text>
+                  <line x1="108" y1="50" x2="130" y2="50" stroke="url(#grad3)" stroke-width="1.5" />
+                  <polygon points="127,46 134,50 127,54" fill="#00d4ff" />
+                  <!-- Step 2 -->
+                  <rect x="135" y="30" width="88" height="40" rx="10" stroke="url(#grad3)" stroke-width="1.5"
+                    fill="rgba(0,212,255,0.04)" />
+                  <text x="179" y="48" text-anchor="middle" fill="#94a3b8" font-size="9"
+                    font-family="Inter, sans-serif">Data</text>
+                  <text x="179" y="60" text-anchor="middle" fill="#94a3b8" font-size="9"
+                    font-family="Inter, sans-serif">Cleaning</text>
+                  <line x1="223" y1="50" x2="248" y2="50" stroke="url(#grad3)" stroke-width="1.5" />
+                  <polygon points="245,46 252,50 245,54" fill="#7c3aed" />
+                  <!-- Step 3 -->
+                  <rect x="252" y="30" width="88" height="40" rx="10" stroke="url(#grad3)" stroke-width="1.5"
+                    fill="rgba(124,58,237,0.04)" />
+                  <text x="296" y="54" text-anchor="middle" fill="#94a3b8" font-size="9"
+                    font-family="Inter, sans-serif">Validation</text>
+                  <!-- Arrow down -->
+                  <line x1="296" y1="70" x2="296" y2="100" stroke="#7c3aed" stroke-width="1.5" />
+                  <polygon points="292,97 296,104 300,97" fill="#7c3aed" />
+                  <!-- Step 4 -->
+                  <rect x="252" y="108" width="88" height="40" rx="10" stroke="#7c3aed" stroke-width="1.5"
+                    fill="rgba(124,58,237,0.06)" />
+                  <text x="296" y="126" text-anchor="middle" fill="#94a3b8" font-size="9"
+                    font-family="Inter, sans-serif">Encryption</text>
+                  <text x="296" y="138" text-anchor="middle" fill="#94a3b8" font-size="9"
+                    font-family="Inter, sans-serif">&amp; Hashing</text>
+                  <line x1="252" y1="128" x2="223" y2="128" stroke="url(#grad3)" stroke-width="1.5" />
+                  <polygon points="226,124 219,128 226,132" fill="#00d4ff" />
+                  <!-- Step 5 -->
+                  <rect x="120" y="108" width="100" height="40" rx="10" stroke="url(#grad3)" stroke-width="1.5"
+                    fill="rgba(0,212,255,0.04)" />
+                  <text x="170" y="126" text-anchor="middle" fill="#94a3b8" font-size="9"
+                    font-family="Inter, sans-serif">GDPR/CCPA</text>
+                  <text x="170" y="138" text-anchor="middle" fill="#94a3b8" font-size="9"
+                    font-family="Inter, sans-serif">Compliance</text>
+                  <line x1="120" y1="128" x2="108" y2="128" stroke="url(#grad3)" stroke-width="1.5" />
+                  <polygon points="111,124 104,128 111,132" fill="#00d4ff" />
+                  <!-- Step 6 -->
+                  <rect x="15" y="108" width="88" height="40" rx="10" stroke="#00d4ff" stroke-width="1.5"
+                    fill="rgba(0,212,255,0.06)" />
+                  <text x="59" y="132" text-anchor="middle" fill="#94a3b8" font-size="9"
+                    font-family="Inter, sans-serif">RBAC</text>
+                  <!-- Arrow down -->
+                  <line x1="59" y1="148" x2="59" y2="178" stroke="#00d4ff" stroke-width="1.5" />
+                  <polygon points="55,175 59,182 63,175" fill="#00d4ff" />
+                  <!-- Final -->
+                  <rect x="15" y="185" width="325" height="40" rx="12" stroke="url(#grad3)" stroke-width="2"
+                    fill="rgba(0,212,255,0.08)" />
+                  <text x="177" y="209" text-anchor="middle" fill="#00d4ff" font-size="11"
+                    font-family="Inter, sans-serif" font-weight="600">✓ Clean &amp; Secure Dataset</text>
+                  <!-- Shield icon -->
+                  <circle cx="340" y="260" r="30" stroke="#7c3aed" stroke-width="1" fill="rgba(124,58,237,0.04)"
+                    cy="260" />
+                  <text x="340" y="268" text-anchor="middle" fill="#7c3aed" font-size="12"
+                    font-family="Inter, sans-serif" font-weight="600">SECURE</text>
+                </svg>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tag">Data Governance</div>
+              <h3 class="project-title">Credit Card Fraud Detection – Data Governance</h3>
+              <p class="project-oneliner">Cleaned, validated, and secured Kaggle's credit card fraud dataset with
+                privacy enforcement and compliance controls.</p>
+              <div class="project-details">
+                <div class="project-detail">
+                  <span class="project-detail-label">My Work</span>
+                  <span class="project-detail-value">Data cleaning, validation pipeline, encryption, hashing, RBAC,
+                    GDPR/CCPA/HIPAA compliance</span>
+                </div>
+                <div class="project-detail">
+                  <span class="project-detail-label">Results</span>
+                  <span class="project-detail-value">Fully compliant, clean dataset ready for analytics with multi-layer
+                    privacy controls</span>
+                </div>
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">SQL</span>
+                <span class="tech-badge">Data Governance</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-btn primary">View Details →</a>
+                <a href="#" class="project-btn">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Premier League Dashboard -->
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-visual" style="padding:0;">
+              <div class="project-carousel" id="pl-carousel">
+                <img src="dashboard-1.png" alt="Premier League Dashboard – KPIs, Elite Scorers, League Rankings"
+                  class="carousel-img active" />
+                <img src="dashboard-2.png" alt="Premier League Dashboard – Stadium ROI, Player Value Efficiency"
+                  class="carousel-img" />
+                <div class="carousel-controls">
+                  <button class="carousel-btn" data-dir="prev" aria-label="Previous">‹</button>
+                  <span class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                  </span>
+                  <button class="carousel-btn" data-dir="next" aria-label="Next">›</button>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tag">BI Dashboard</div>
+              <h3 class="project-title">Premier League Analytics Dashboard</h3>
+              <p class="project-oneliner">Interactive SQL-powered dashboard analyzing the 2023–24 Premier League season
+                with 10 advanced visualizations.</p>
+              <div class="project-details">
+                <div class="project-detail">
+                  <span class="project-detail-label">My Work</span>
+                  <span class="project-detail-value">SQL data extraction, dynamic filters, interactive charts (bar,
+                    donut, scatter, area, lollipop)</span>
+                </div>
+                <div class="project-detail">
+                  <span class="project-detail-label">Results</span>
+                  <span class="project-detail-value">10 visualizations with dynamic filters; insights on player
+                    efficiency, club ROI, and revenue</span>
+                </div>
+              </div>
+              <div class="project-tech">
+                <span class="tech-badge">SQL Server</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">AmCharts 5</span>
+                <span class="tech-badge">HTML/CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-btn primary">View Details →</a>
+                <a href="#" class="project-btn">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <p class="section-label reveal">Technical Arsenal</p>
+      <h2 class="section-title reveal reveal-delay-1">Skills &amp; Tools</h2>
+
+      <div class="skills-categories">
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-cat-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3 class="skill-cat-title">Programming</h3>
+          <div class="skill-list">
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">C#</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-cat-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h3 class="skill-cat-title">Tools &amp; Platforms</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Visual Studio</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">SQL Server</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">Google Colab</span>
+            <span class="skill-pill">PyCharm</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">AmCharts 5</span>
+          </div>
+        </div>
+        <div class="skill-category reveal reveal-delay-3">
+          <div class="skill-cat-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 16v-4M12 8h.01" />
+            </svg>
+          </div>
+          <h3 class="skill-cat-title">Concepts</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Database Design</span>
+            <span class="skill-pill">Indexing (B+ Trees)</span>
+            <span class="skill-pill">ACID Transactions</span>
+            <span class="skill-pill">Normalization</span>
+            <span class="skill-pill">Data Governance</span>
+            <span class="skill-pill">BI Dashboards</span>
+            <span class="skill-pill">Data Pipelines</span>
+            <span class="skill-pill">OOP</span>
+            <span class="skill-pill">Web Scraping</span>
+            <span class="skill-pill">REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section class="section" id="achievements">
+    <div class="section-inner">
+      <p class="section-label reveal">Recognition</p>
+      <h2 class="section-title reveal reveal-delay-1">Achievements</h2>
+
+      <div class="achievements-list">
+        <div class="achievement-card reveal reveal-delay-2">
+          <div class="achievement-icon">
+            <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+              <path
+                d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22M18 2H6v7a6 6 0 1 0 12 0V2z" />
+            </svg>
+          </div>
+          <div class="achievement-content">
+            <h3>Certificate of Participation – 20th UGRF</h3>
+            <p>Undergraduate Research Forum, Nile University, Egypt</p>
+            <p>Project: Cleaning System Robot</p>
+            <p class="achievement-date">August 2025</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal reveal-delay-3">
+          <div class="achievement-icon">
+            <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+          </div>
+          <div class="achievement-content">
+            <h3>B.Sc. in Data Science &amp; AI</h3>
+            <p>Zewail City of Science and Technology — Currently pursuing (Sep 2024 – May 2028)</p>
+            <p class="achievement-date">Expected May 2028</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal reveal-delay-4">
+          <div class="achievement-icon">
+            <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="3" y="11" width="18" height="10" rx="2" />
+              <circle cx="12" cy="5" r="2" />
+              <path d="M12 7v4M8 16h0M16 16h0" />
+            </svg>
+          </div>
+          <div class="achievement-content">
+            <h3>Robotics Course – Arduino Projects</h3>
+            <p>Line follower, obstacle-avoiding robot, Bluetooth-controlled navigation, MPU6050 &amp; nRF24L01
+              integration</p>
+            <p class="achievement-date">July 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="mailto:oa5429946@gmail.com">oa5429946@gmail.com</a>
+        <a href="tel:+201013615904">+20 101 361 5904</a>
+        <a href="https://www.linkedin.com/in/omar-amr-56270232a" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Code10101010101" target="_blank">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2025 Omar Alghannam. Built with passion for data engineering.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
