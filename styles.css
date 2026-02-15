@@ -983,7 +983,15 @@ img {
     }
 
     .project-visual {
-        min-height: 280px;
+        min-height: 250px;
+    }
+
+    .project-carousel {
+        min-height: 250px;
+    }
+
+    .carousel-img {
+        padding: 0.5rem;
     }
 
     .skills-categories {
@@ -1062,6 +1070,10 @@ img {
     .project-title {
         font-size: 1.3rem;
     }
+
+    .project-carousel {
+        min-height: 220px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1072,6 +1084,14 @@ img {
     .profile-frame {
         width: 200px;
         height: 200px;
+    }
+
+    .project-carousel {
+        min-height: 180px;
+    }
+
+    .carousel-img {
+        padding: 0.25rem;
     }
 
     .about-stats {
