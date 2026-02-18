@@ -1152,6 +1152,16 @@ img {
         order: -1;
     }
 
+    .hero-mascot-wrapper {
+        order: -1;
+        margin: 0 auto;
+    }
+
+    .mascot-container {
+        width: 150px;
+        height: 150px;
+    }
+
     .profile-frame {
         width: 250px;
         height: 250px;
@@ -1218,6 +1228,10 @@ img {
 
     .hero {
         padding-top: 90px;
+    }
+
+    .hero-mascot-wrapper {
+        display: none;
     }
 
     .hero-text h1 {
