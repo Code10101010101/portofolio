@@ -4,7 +4,7 @@ Welcome to the official documentation for the **Omar Alghannam Portfolio**. This
 
 ---
 
-##  Overview
+## 🚀 Overview
 
 This portfolio is built to be more than just a static bio; it's a dynamic, interactive experience that reflects the engineering rigor and analytical mindset of a Data Engineer. It features a modern "dark mode" aesthetic (with light mode toggle), interactive canvas animations, and a responsive project showcase.
 
@@ -15,7 +15,7 @@ This portfolio is built to be more than just a static bio; it's a dynamic, inter
 
 ---
 
-##  Technical Stack
+## 🛠 Technical Stack
 
 The project adheres to a "Vanilla-First" philosophy, ensuring zero external dependencies for core functionality (except for Google Fonts).
 
@@ -27,7 +27,7 @@ The project adheres to a "Vanilla-First" philosophy, ensuring zero external depe
 
 ---
 
-##  Project Structure
+## 📂 Project Structure
 
 A clean, modular structure ensures simplicity and ease of updates.
 
@@ -45,7 +45,7 @@ Port/
 
 ---
 
-##  Key Features & Sections
+## ✨ Key Features & Sections
 
 ### 1. The Hero Section
 -   **Dynamic Backdrop**: A custom-coded particle system running on a `<canvas>` element creates a high-tech "living" background.
@@ -68,7 +68,7 @@ Port/
 
 ---
 
-##  How to Maintain & Update
+## 🚦 How to Maintain & Update
 
 ### Updating Content
 -   **New Project**: Add a `project-card` div in `index.html` and reference the image in the `project-visual` section.
