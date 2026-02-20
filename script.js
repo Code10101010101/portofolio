@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initActiveNav();
   initCarousels();
-  initEmailFallback();
 });
 
 /* ---------- THEME TOGGLE ---------- */
@@ -209,36 +208,6 @@ function initCarousels() {
 
     // Auto-advance every 5 seconds
     setInterval(() => show(current + 1), 5000);
-  });
-}
-
-/* ---------- EMAIL FALLBACK ---------- */
-function initEmailFallback() {
-  const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-
-  // Create notification element
-  const toast = document.createElement('div');
-  toast.className = 'email-toast';
-  document.body.appendChild(toast);
-
-  emailLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const email = link.getAttribute('href').replace('mailto:', '');
-
-      // Copy to clipboard
-      navigator.clipboard.writeText(email).then(() => {
-        const subject = encodeURIComponent("Contact from Portfolio");
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`;
-
-        // Update and show toast with Gmail link
-        toast.innerHTML = `Email copied! <a href="${gmailUrl}" target="_blank">Try Gmail</a>`;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 5000);
-      });
-
-      // We still let the default mailto: action happen, 
-      // but the copy works as a fallback/enhancement.
-    });
   });
 }
 
