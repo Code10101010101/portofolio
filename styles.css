@@ -243,6 +243,7 @@ img {
     inset: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 }
 
 .hero-gradient {
@@ -276,6 +277,8 @@ img {
     grid-template-columns: 1fr 380px;
     gap: 4rem;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-text {
