@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initActiveNav();
   initCarousels();
+  initEmailHandler();
 });
 
 /* ---------- THEME TOGGLE ---------- */
@@ -221,3 +222,64 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+/* ---------- EMAIL HANDLER ---------- */
+function initEmailHandler() {
+  const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+
+  emailLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const email = link.getAttribute('href').replace('mailto:', '');
+
+      // Copy to clipboard
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('Email copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy email: ', err);
+      });
+
+      // Optional: Since it's a mailto link, let it proceed normally too. 
+      // If the user doesn't have a mail client, the clipboard copy is the hero.
+    });
+  });
+}
+
+function showToast(message) {
+  // 1. Remove ANY existing toast container or toasts first
+  const existingToasts = document.querySelectorAll('.toast');
+  existingToasts.forEach(t => t.remove());
+
+  // 2. Clear the container if it exists
+  let container = document.querySelector('.toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.className = 'toast-container';
+    document.body.appendChild(container);
+  }
+  container.innerHTML = '';
+
+  // 3. Create new toast
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = `
+    <span class="toast-icon">
+      <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+      </svg>
+    </span>
+    <span class="toast-message">${message}</span>
+  `;
+
+  container.appendChild(toast);
+
+  // Trigger animation
+  requestAnimationFrame(() => {
+    toast.classList.add('show');
+  });
+
+  // Remove after 2.5s (slightly faster feel)
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 400);
+  }, 2500);
+}
