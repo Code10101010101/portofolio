@@ -219,7 +219,6 @@ function initEmailFallback() {
   // Create notification element
   const toast = document.createElement('div');
   toast.className = 'email-toast';
-  toast.innerText = 'Email address copied to clipboard!';
   document.body.appendChild(toast);
 
   emailLinks.forEach(link => {
@@ -228,9 +227,13 @@ function initEmailFallback() {
 
       // Copy to clipboard
       navigator.clipboard.writeText(email).then(() => {
-        // Show toast
+        const subject = encodeURIComponent("Contact from Portfolio");
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`;
+
+        // Update and show toast with Gmail link
+        toast.innerHTML = `Email copied! <a href="${gmailUrl}" target="_blank">Try Gmail</a>`;
         toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3000);
+        setTimeout(() => toast.classList.remove('show'), 5000);
       });
 
       // We still let the default mailto: action happen, 
