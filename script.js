@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initActiveNav();
   initCarousels();
+  initEmailFallback();
 });
 
 /* ---------- THEME TOGGLE ---------- */
@@ -208,6 +209,33 @@ function initCarousels() {
 
     // Auto-advance every 5 seconds
     setInterval(() => show(current + 1), 5000);
+  });
+}
+
+/* ---------- EMAIL FALLBACK ---------- */
+function initEmailFallback() {
+  const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+
+  // Create notification element
+  const toast = document.createElement('div');
+  toast.className = 'email-toast';
+  toast.innerText = 'Email address copied to clipboard!';
+  document.body.appendChild(toast);
+
+  emailLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const email = link.getAttribute('href').replace('mailto:', '');
+
+      // Copy to clipboard
+      navigator.clipboard.writeText(email).then(() => {
+        // Show toast
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+      });
+
+      // We still let the default mailto: action happen, 
+      // but the copy works as a fallback/enhancement.
+    });
   });
 }
 
